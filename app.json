@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "firstapp",
-    "slug": "firstapp",
+    "name": "reviewsapp",
+    "slug": "reviewsapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
