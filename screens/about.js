@@ -9,13 +9,6 @@ export default function AboutScreen({navigation}){
             <Text  style={globalstyles.titleText}>This is the About Screen</Text>
             <View style={globalstyles.btncontent}>
                 <Button 
-                    title="Go To Details"
-                    onPress={()=>navigation.navigate('Details')}
-                    style={globalstyles.btn}
-                />
-            </View>
-            <View style={globalstyles.btncontent}>
-                <Button 
                     title="Go Back"
                     onPress={()=>navigation.goBack()}
                     style={globalstyles.btn}

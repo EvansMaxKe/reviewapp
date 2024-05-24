@@ -1,11 +1,11 @@
 import React from "react";
-import Navigator from './routes/homeStack';
-import DrawerNavigation from "./routes/drawer";
+import { NavigationContainer } from '@react-navigation/native';
+import Navigator from "./routes/navigation";
 import BottomTab from "./routes/bottomtabs";
 
 export default function App(){
   return(
-    <Navigator /> 
-    //<DrawerNavigation />
+      //<BottomTab/>
+      <Navigator/>
   );
 }

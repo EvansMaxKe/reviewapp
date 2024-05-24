@@ -4,9 +4,12 @@ import { globalstyles } from "../styles/global";
 import MaterialIcons from '@expo/vector-icons';
 
 export default function Header(){
+    const OpenMenu = () =>{
+        //navigation.openDrawer()
+    }
     return(
         <View>
-            {/* icone for the menu */}
+            <MaterialIcons name="menu" size={24} color="black" onPress={OpenMenu}/>
             <View>
                 <Text style={styles.headerText}>SkyMax Reviews App</Text>
             </View>
@@ -29,5 +32,9 @@ const styles=StyleSheet.create({
         color:'#333',
         letterSpacing:1,
 
+    },
+    icon:{
+        position:'absolute',
+        left:16,
     }
 })

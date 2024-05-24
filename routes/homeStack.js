@@ -3,11 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/home';
 import DetailScreen from '../screens/reviewDetails';
-import AboutScreen from '../screens/about';
 import { StyleSheet } from "react-native";
-import LogoTitle from '../shared/logoTitle';
-import { Button } from 'react-native-web';
-
+import DrawerNavigation from './drawer';
 const Stack = createNativeStackNavigator();
 
 export default function HomeStack() {
@@ -20,25 +17,12 @@ export default function HomeStack() {
           headerTitleStyle:{
             fontWeight:'bold',
           },
-          headerTitleAlign:'center'
+          headerTitleAlign:'center',
+          headerShown:true
         }}>
-          <Stack.Screen 
-          name="Home" 
-          component={HomeScreen}
-          options={{
-            title:'SkyMax Reviews App',
-            headerTitle:(prop)=> <LogoTitle {...prop}/>,
-            headerRight:() =>(
-              <Button 
-                title="Info"
-                color="green"
-                onPress={()=>alert('No Notifications Yet!')}
-              />
-            )
-            }} />
-          {/* <Stack.Screen name={()=><Header/>} component={HomeScreen} style={styles.headerstyle}/> */}
-          <Stack.Screen name="About" component={AboutScreen}  />
-          <Stack.Screen name="Details" component={DetailScreen}  initialParams={{ itemId: 42, otherInfo:"more info coming" }}/>
+          
+          <Stack.Screen name="Home" component={DrawerNavigation} />
+          <Stack.Screen name="Details" component={DetailScreen}  initialParams={{ itemId: 42, otherInfo:"more info coming" }} options={{headerShown:true}}/>
         </Stack.Navigator>
       </NavigationContainer>
     );
