@@ -7,11 +7,12 @@ export const globalstyles=StyleSheet.create({
         backgroundColor:'lightcyan'
     },
     titleText:{
-        fontSize:18,
+        fontSize:23,
         fontWeight:'bold',
         color:'#333',
         paddingVertical:15,
         paddingHorizontal:10,
+        textAlign:'center'
     },
     titleTextList:{
         fontSize:18,
